@@ -1,0 +1,83 @@
+body{
+    display:flex;
+}
+    
+i:before, i:after {
+    content:"";
+    position: absolute;
+    background-color: #000;
+    transform: translate(-6px, 0);
+    right:20px;
+    width: 3px;
+    height: 9px;
+    margin: 10px 0 0 0;
+}
+i:before {
+    transform: translate(-2px, 0) rotate(45deg);
+    /* background-color:blue; */
+}
+i:after{
+    transform: translate(2px, 0) rotate(-45deg);
+}
+li input[type=checkbox].showbutton{
+    position:absolute;
+    width:100%;
+    height:100%;
+    z-index:1;
+    opacity:0;
+    touch-action: manipulation;
+}
+input[type=checkbox] ~ h1:hover{
+    text-decoration: underline;
+}
+lightning-input {
+    overflow:hidden;
+    position:relative;
+    contain: layout;
+    display:inline-block;
+    z-index:2;
+    padding: 3px 15px 3px 15px;
+    width:100%;
+}
+ul {
+    max-width:100%;
+    text-align:left;
+    list-style:none;
+    perspective: 900;
+    padding: 0;
+    margin:0;;
+}
+ul h1{
+    font-size:20px;
+    font-weight: bold;
+    padding: 0;
+    display:block;
+    text-align:left;
+    margin:0;
+    text-transform: none;
+}
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+ul li{
+    position: relative;
+    overflow:hidden;
+}
+
+/* what it looks like when NOT expanded */
+.showbutton:checked ~ i:before{
+    transform: translate(2px, 0) rotate(45deg);
+}
+.showbutton:checked ~ i:after{
+    transform: translate(-2px, 0) rotate(-45deg);
+}
+.showbutton:checked ~ div {
+    max-height: 0;
+    opacity: 0;
+}
+
+
+
+

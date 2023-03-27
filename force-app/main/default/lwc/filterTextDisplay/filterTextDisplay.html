@@ -1,0 +1,44 @@
+<template>
+    <lightning-card>
+        <template if:true={isLoading}>
+            <lightning-spinner variant="brand" size="large" alternative-text="Loading"> </lightning-spinner>
+        </template>
+        <p style="font-weight: bold; font-size:20px; display: inline-block" >Filter Products</p>
+        <lightning-helptext 
+         class="slds-m-left_xx-small" 
+         alternative-text="" 
+         content="Separate values with a semicolon to enter multiple values">
+        </lightning-helptext>
+        <template for:each={facetTextDisplay} for:item="item">
+            <div  key={item.facetName}>
+                    <div if:true={item.isCombobox}>
+                    <lightning-combobox
+                    name="combobox"
+                    label={item.facetName} 
+                    value={item.value} 
+                    options={item.facetValues} 
+                    variant="label-inline">
+                    </lightning-combobox>
+                </div>
+                <div if:false={item.isCombobox}>
+                    <lightning-input
+                        name="textInput"
+                        type="text" 
+                        label={item.facetName} 
+                        variant="label-inline">
+                    </lightning-input>
+                </div>
+            </div>
+        </template>
+            <p style="color: red" class="slds-align_absolute-center">{userInputError}</p>
+        <div if:true={hasContentToDisplay}>
+            <lightning-button 
+            label="Filter" 
+            class="slds-align_absolute-center slds-m-top_small" 
+            variant="brand" 
+            onclick={filterButtonHandler}>
+        </lightning-button>
+        </div>
+        
+    </lightning-card>
+</template>

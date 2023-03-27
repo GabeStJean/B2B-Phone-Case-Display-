@@ -1,0 +1,30 @@
+<template>
+    <div class="slds-grid slds-wrap">
+        <template for:each={productList} for:item="item">
+            
+            <div key={item.id} class="slds-col 
+                                      slds-small-size_1-of-1
+                                      slds-medium-size_1-of-2
+                                      slds-large-size_1-of-3">
+                
+                <image class="slds-m-bottom_x-small slds-align_absolute-center" 
+                        src={item.defaultImage.url} 
+                        alt="phone case">
+               
+                <a class="slds-align_absolute-center 
+                          slds-text-heading_small 
+                          slds-line-clamp_x-small" 
+                          title={item.name}
+                          href=""> 
+                    <b>{item.name}</b>
+                </a>
+                <template if:true={item.prices}>
+                    <p class="slds-m-bottom_large slds-align_absolute-center slds-text-heading_medium"><b>${item.prices.unitPrice}</b></p>
+                </template>
+                <template if:false={item.prices}>
+                    <p class="slds-m-bottom_large slds-align_absolute-center slds-text-heading_small"><b>Price unavailable</b></p>
+                </template>
+            </div>
+        </template>
+	</div>	
+</template>

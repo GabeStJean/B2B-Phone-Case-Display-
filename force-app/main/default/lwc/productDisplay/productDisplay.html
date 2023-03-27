@@ -1,0 +1,46 @@
+<template>
+	<lightning-card>
+		<div class="slds-m-around_medium  slds-grid slds-gutters slds-wrap">
+						
+			<template if:true={isLoading}>
+    			<lightning-spinner variant="brand" size="large" alternative-text="Loading"> </lightning-spinner>
+			</template>
+			
+			<div class="slds-col 
+						slds-large-size_1-of-3
+						slds-medium-size_1-of-3
+						slds-small-size_1-of-1">
+
+				<c-filter-checkbox-display 
+					facet-display={facetDisplay} 
+					facet-pillbox={facetPillbox} 
+					category-landing-page-id={categoryLandingPageId}
+					onfiltertextdisplayupdate={handleFilterCheckboxDisplay}
+					oncheckboxselect={handleFilterCheckboxDisplay}
+					onremovepillevent={handleFilterCheckboxDisplay}>
+				</c-filter-checkbox-display>
+			</div>
+			
+			<div class="slds-col 
+						slds-large-size_2-of-3
+						slds-medium-size_2-of-3
+						slds-small-size_1-of-1">
+
+				<div class="slds-m-around_medium">
+					<div if:true={hasContentToDisplay}>
+						<p style="font-weight: bold; font-size:60px" >{currentCategoryName}</p>
+					</div>
+					<template if:true={isFacetAdded}>
+						<lightning-button label="CLEAR ALL" variant="base" onclick={refreshProductDisplay} class="buttonclass"></lightning-button>
+					</template>
+					<div>
+						<lightning-pill-container items={facetPillbox} onitemremove={handlePillboxItemRemove} class="pillclass"></lightning-pill-container>
+					</div>
+				</div>
+				
+				<c-list-of-products product-list={productList}></c-list-of-products>
+
+			</div>
+		</div>
+	</lightning-card>
+</template>

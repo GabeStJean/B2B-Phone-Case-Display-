@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Active_Panel__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>By default the panel will always be active, uncheck if preferred to not be active. If not active panel will not display on parent carousel.</description>
+    <externalId>false</externalId>
+    <label>Is Active Panel</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

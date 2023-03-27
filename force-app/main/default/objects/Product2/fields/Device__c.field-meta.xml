@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Device__c</fullName>
+    <externalId>false</externalId>
+    <label>Device</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Brand__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Device</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Apple</controllingFieldValue>
+            <valueName>iPhone</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Apple</controllingFieldValue>
+            <valueName>iPad</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Samsung</controllingFieldValue>
+            <valueName>Galaxy</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

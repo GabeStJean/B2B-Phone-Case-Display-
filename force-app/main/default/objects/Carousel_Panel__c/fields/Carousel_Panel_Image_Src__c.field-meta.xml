@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Carousel_Panel_Image_Src__c</fullName>
+    <description>URL of what image the panel will display.</description>
+    <externalId>false</externalId>
+    <label>Carousel Panel Image Src</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Url</type>
+</CustomField>

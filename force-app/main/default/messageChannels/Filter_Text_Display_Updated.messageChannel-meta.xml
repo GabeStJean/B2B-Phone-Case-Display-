@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>FilterTextDisplayUpdated</masterLabel>
+    <isExposed>true</isExposed>
+    <description>Message Channel to pass Facet Text Display filters</description>
+      <lightningMessageFields>
+         <fieldName>userInput</fieldName>
+        <description>Retrieves the user input from the display</description>
+     </lightningMessageFields>
+     <lightningMessageFields>
+         <fieldName>facetDisplay</fieldName>
+        <description>Retrieves the generated facetdisplay from this component</description>
+     </lightningMessageFields>
+</LightningMessageChannel>

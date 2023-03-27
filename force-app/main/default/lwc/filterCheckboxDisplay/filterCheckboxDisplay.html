@@ -1,0 +1,41 @@
+<!-- sldsValidatorIgnore -->
+<template>
+
+   <template if:true={isLoading}>
+    	<lightning-spinner variant="brand" size="large" alternative-text="Loading"> </lightning-spinner>
+	</template>
+       <ul>
+        <li>
+        <template for:each={facetDisplay} for:item="item">
+            <div key={item.facetName}>
+                <input type="checkbox" class="showbutton">
+                <i></i>
+                <h1 title={item.facetName}>{item.facetName}</h1>
+                <div class="slds-m-vertical_large" style="border:.01px solid rgb(232, 227, 227); border-radius: 7px">
+                <template iterator:it={item.facetValues}>
+                    <div class="filterlist slds-grid slds-wrap" key={it.value.value}>
+                            <div class="slds-col">
+                                <lightning-input 
+                                type="checkbox" 
+                                name={item.facetName}
+                                label={it.value.value}
+                                onchange={handleCheckbox}
+                                checked={it.value.checked}
+                                disabled={it.value.disabled}>
+                                </lightning-input>   
+                            </div>
+                        
+                        <div class="slds-col slds-grow-none slds-m-top_large" >   
+                            <lightning-badge label={it.value.quantity} class="slds-badge_inverse"></lightning-badge>
+                        </div>
+                        <div if:false={it.last} class="slds-col slds-size_4-of-4  slds-grow-none" style="background-color:rgb(232, 227, 227)">   
+                            <hr  style="margin: 0">
+                        </div>
+                    </div>
+                </template>
+               </div>
+            </div>
+        </template>
+        </li>
+    </ul>
+</template>

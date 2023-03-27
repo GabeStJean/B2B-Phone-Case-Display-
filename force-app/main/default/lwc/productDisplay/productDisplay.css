@@ -1,0 +1,13 @@
+.buttonclass{
+    font-weight: bold;
+    font-size:13px;
+    --slds-c-button-text-color:black;
+}
+.buttonclass:hover{
+    text-decoration: underline;
+}
+
+:host {
+    --slds-c-pill-color-background: #07b4f3;
+    --slds-c-pill-color-background-hover: #07b4f3;
+}
