@@ -1,5 +1,6 @@
 # Custom Product Display Component for B2B Commerce Web Store
-This application is a custom product display component for Salesforce Experience Cloud, and it is built using Lightning Web Component (LWC) and Apex. A video showcasing this app can be found [here](https://www.youtube.com/watch?)
+This application is a custom product display component for Salesforce Experience Cloud, and it is built using Lightning Web Component (LWC) and Apex. This video [here](https://www.youtube.com/watch?) showcases the component displaying an array of phone cases for a fictional web store.
+
 
 The goal of this project is to create a customized category landing page for an Experience page that provides additional features compared to the out of the box product display component in Experience builder. These features are a pop-up pillbox display for a selected facet, number count display for the amount of products available for a series of facets, and a interface for text prompt filtering for the display.
 
