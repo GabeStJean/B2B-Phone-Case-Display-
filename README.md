@@ -1,4 +1,4 @@
-# Custom Product Display Component for B2B Commerce Web store
+# Custom Product Display Component for B2B Commerce Web Store
 
 This application is a custom product display component for Salesforce Experience Cloud, and it is built using Lightning Web Ccomponents (LWC) and Apex. A video showcasing this app can be found [here](https://www.youtube.com/watch?)
 
